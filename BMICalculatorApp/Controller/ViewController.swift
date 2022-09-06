@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var heightLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
     @IBOutlet weak var heightSlider: UISlider!
@@ -27,16 +27,15 @@ class ViewController: UIViewController {
         weightLabel.text = String(Int(sender.value)) + "Kg"
     }
     
-
+    
     @IBAction func calculateButtonTapped(_ sender: UIButton) {
         let height = heightSlider.value
         let weight = weightSlider.value
-        var bmiValue = weight/pow(height,2)
-        print(bmiValue)
+        let bmiValue = weight/pow(height,2)
         
         let secondViewController = SecondViewController()
+        secondViewController.bmiValue = String(format: "%.1f", bmiValue)
         
-        // now in order to display secondViewController, we need current view controller to show the secondViewController
         self.present(secondViewController, animated: true, completion: nil)
     }
 }

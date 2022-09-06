@@ -60,14 +60,38 @@
 			children = (
 				B221FCB528C666CB008CA46F /* AppDelegate.swift */,
 				B221FCB728C666CB008CA46F /* SceneDelegate.swift */,
-				B221FCB928C666CB008CA46F /* ViewController.swift */,
-				B2E6249D28C73C9F00808FA9 /* SecondViewController.swift */,
-				B221FCBB28C666CB008CA46F /* Main.storyboard */,
+				B2E624A128C748D800808FA9 /* Model */,
+				B2E624A028C748D100808FA9 /* View */,
+				B2E6249F28C748A300808FA9 /* Controller */,
 				B221FCBE28C666CD008CA46F /* Assets.xcassets */,
 				B221FCC028C666CD008CA46F /* LaunchScreen.storyboard */,
 				B221FCC328C666CD008CA46F /* Info.plist */,
 			);
 			path = BMICalculatorApp;
+			sourceTree = "<group>";
+		};
+		B2E6249F28C748A300808FA9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B221FCB928C666CB008CA46F /* ViewController.swift */,
+				B2E6249D28C73C9F00808FA9 /* SecondViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B2E624A028C748D100808FA9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B221FCBB28C666CB008CA46F /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B2E624A128C748D800808FA9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
