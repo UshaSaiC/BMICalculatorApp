@@ -16,7 +16,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
     
     
@@ -28,13 +27,17 @@ class ViewController: UIViewController {
         weightLabel.text = String(Int(sender.value)) + "Kg"
     }
     
-    // BMI (Body Mass Index) = Weight (Kg)/ Height*Height (m^2)
+
     @IBAction func calculateButtonTapped(_ sender: UIButton) {
         let height = heightSlider.value
         let weight = weightSlider.value
-//        var bmiValue = weight/(height*height)
         var bmiValue = weight/pow(height,2)
         print(bmiValue)
+        
+        let secondViewController = SecondViewController()
+        
+        // now in order to display secondViewController, we need current view controller to show the secondViewController
+        self.present(secondViewController, animated: true, completion: nil)
     }
 }
 
